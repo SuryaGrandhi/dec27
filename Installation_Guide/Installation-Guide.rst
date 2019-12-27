@@ -202,19 +202,25 @@ Installation Issue with Red Hat Enterprise Linux v7.7
 **Note:**
 
 For workstations, use
+
 :: 
 
-rhel-7-workstation-optional-rpms
+   rhel-7-workstation-optional-rpms
+
 
 For servers, use
 
 ::
-rhel-7-server-optional-rpms
+
+   rhel-7-server-optional-rpms
+
 
 **To install**
 
 ::
-$sudo subscription-manager repos --enable=rhel-7-workstation-optional-rpms
+
+   $sudo subscription-manager repos --enable=rhel-7-workstation-optional-rpms
+
 
 You will see the following message:
 
@@ -227,7 +233,9 @@ Error: 'rhel-7-workstation-optional-rpms' does not match a valid repository ID. 
 Use
 
 ::
-$sudo subscription-manager repos --enable=rhel-7-server-optional-rpms
+ 
+   $sudo subscription-manager repos --enable=rhel-7-server-optional-rpms
+
 
 You will see the following message:
 
@@ -249,7 +257,9 @@ ImportError: No module named sqlite3
     1. Run the following command
 
 ::
-sudo vi /opt/rocm/bin/rocprof
+
+   sudo vi /opt/rocm/bin/rocprof
+
 
     2. Change Python to Python3.6.
 
@@ -260,7 +270,8 @@ sudo vi /opt/rocm/bin/rocprof
 â€¢ Run the following command:
 
 ::
-alias python=python3.6
+
+   alias python=python3.6
 
 
 .. _gpuOwl Fails with Memory Access Fault Error:
@@ -493,7 +504,10 @@ Note: The following steps do not apply to the CentOS installation.
 
 3. Enable additional repositories by downloading and installing the epel-release-latest-7 repository RPM:
 
-       sudo rpm -ivh
+::
+
+   sudo rpm -ivh
+
 
 For more details, see https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
 
@@ -539,7 +553,10 @@ Note: The URL of the repository must point to the location of the repositoriesâ€
 
 3. Install ROCm components using the following command:
 
+::
+
     sudo yum install rocm-dkms
+
 
 4. Restart the system. The rock-dkms component is installed and the /dev/kfd device is now available.
 
